@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="xyz.appsian.googlebooksparser.activities.MainActivity">
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progress_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cpv_animAutostart="false"
+        app:cpv_indeterminate="true" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:background="@color/cardview_light_background">
+
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:src="@android:drawable/ic_search_category_default"
+            android:background="@android:color/transparent"/>
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="Search Term"
+            android:inputType="textPersonName"
+            android:gravity="left|center_vertical"
+
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"></android.support.v7.widget.RecyclerView>
+
+
+    <Button
+        android:id="@+id/loadMoreBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Load More"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
